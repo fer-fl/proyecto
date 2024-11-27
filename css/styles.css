@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+}
+
+h1 {
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    color: #fff;
+    font-size: 14px;
+    border-collapse: collapse;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #fff;
+    color: black;
+}
+
+th {
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: solid 1px #fff;
+}
+
+tbody tr:hover {
+    background-color: rgba(189, 162, 187, 0.2);
+}
+
+a {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+}
+
+label {
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+input {
+    background-color: black;
+    border: none;
+    border-bottom: solid 1px #fff;
+    color: #fff;
+    padding: 5px 0;
+    outline: none;
+}
+
+select {
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: #000;
+    color: white;
+    padding: 5px 30px 5px 0;
+    outline: none;
+    position: relative; /* Para usar pseudo-elementos */
+    width: 170px; /* Ancho del select */
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+select::after {
+    content: ''; /* Flecha personalizada */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid white; /* Color blanco para la flecha */
+    pointer-events: none; /* Permite hacer clic en el select */
+}
+
+select option {
+    background: #333; /* Fondo oscuro para las opciones */
+    color: white; /* Color del texto de las opciones */
+}
+
+select:invalid {
+    color: #ccc; /* Placeholder color */
+}
+
+.below {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+button {
+    border: none;
+    border-bottom: solid 1px #fff;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}

@@ -7,6 +7,8 @@ const app = express();
 // Configuración para manejar datos enviados por POST
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(express.static(__dirname + '/css'));
+
 // Plantillas
 app.set('view engine', 'ejs');
 

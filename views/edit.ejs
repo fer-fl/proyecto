@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Usuario</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <h1>Editar Usuario</h1>
+    <div class="container">
 <form action="/edit/<%= user.id %>" method="POST">
-    <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" value="<%= user.nombre %>" required>
     <br>
-    <label for="email">Email:</label>
     <input type="email" id="email" name="email" value="<%= user.email %>" required>
     <br>
-    <label for="age">Edad:</label>
     <input type="number" id="age" name="age" value="<%= user.age %>" required>
     <br>
-    <label for="phone">Teléfono:</label>
     <input type="text" id="phone" name="phone" value="<%= user.phone %>" required>
     <br>
-    <label for="address">Dirección:</label>
     <input type="text" id="address" name="address" value="<%= user.address %>" required>
     <br>
-    <label for="gender">Género:</label>
     <select id="gender" name="gender" required>
+        <option value="" disabled selected>Género</option>
         <option value="Male" <%= user.gender === "Male" ? "selected" : "" %>>Masculino</option>
         <option value="Female" <%= user.gender === "Female" ? "selected" : "" %>>Femenino</option>
         <option value="Other" <%= user.gender === "Other" ? "selected" : "" %>>Otro</option>
     </select>
     <br>
-    <button type="submit">Actualizar</button>
-    <a href="/">Cancelar</a>
+    <div class="below">
+        <button type="submit">Actualizar</button>
+        <a href="/">Cancelar</a>
+    </div>
 </form>
+</div>
 </body>
 </html>
